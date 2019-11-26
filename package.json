@@ -1,16 +1,31 @@
 {
   "name": "vue-cartkit-library",
   "version": "0.1.0",
+  "author": {
+    "name": "JP Casabianca",
+    "email": "jp@cartkit.com"
+  },
+  "license": "MIT",
+  "files": [
+    "src",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "main": "./dist/vue-cartkit-library.common.js",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name vue-cartkit-library ./src/index.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "core-js": "^3.3.2",
-    "vue": "^2.6.10"
+    "moment": "^2.24.0",
+    "vue": "^2.6.10",
+    "vue-timeago": "^5.1.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
