@@ -9,12 +9,12 @@
     <!-- Close Icon -->
     <div
       id="ck_sp_m-delete-icon-cont"
+      v-if="deletePop"
       :style="deleteIconContStyles"
       @click="closePop"
     >
       <img
         id="ck_sp_m-sp-times"
-        v-if="deletePop"
         src="https://unicons.iconscout.com/release/v1.0.0/svg/times.svg"
         :style="{
           width: '20px !important',
