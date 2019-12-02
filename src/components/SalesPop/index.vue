@@ -40,6 +40,9 @@
         borderRadius: '50%',
         cursor: 'pointer',
         zIndex: '9998 !important',
+        height: '80px !important',
+        width: '80px !important',
+        position: 'relative',
       }"
       @click="clickedPop"
     >
@@ -86,6 +89,7 @@
           position: 'relative',
           color: this.textColor,
           zIndex: '9998 !important',
+          fontWeight: 'normal',
         }"
         @click="clickedPop"
       >
@@ -109,6 +113,7 @@
           position: 'relative',
           color: this.textColor,
           zIndex: '9998 !important',
+          fontWeight: 'normal',
         }"
         @click="clickedPop"
       >
@@ -301,14 +306,6 @@ div#ck_sp_m-cartkit-shop-pop {
 }
 
 #ck_sp_m-sp-img-cont {
-  height: 60px !important;
-  width: 60px !important;
-
-  @media (min-width: 776px) {
-    height: 80px !important;
-    width: 80px !important;
-  }
-
   #ck_sp_m-sp-img {
     width: 100% !important;
     height: auto !important;

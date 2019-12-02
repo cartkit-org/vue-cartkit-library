@@ -52,6 +52,7 @@ export default {
     position: fixed;
     left: 16px;
     bottom: 16px;
+    font-weight: normal;
   }
 }
 </style>
