@@ -78,7 +78,6 @@
         id="ck_sp_m-sp-name"
         :style="{
           transition: 'all .5s',
-          fontWeight: '500',
           marginBottom: '0.25rem',
           marginTop: 0,
           marginLeft: 0,
@@ -89,7 +88,8 @@
           position: 'relative',
           color: this.textColor,
           zIndex: '9998 !important',
-          fontWeight: 'normal',
+          fontWeight: '500 !important',
+          fontSize: '14px !important',
         }"
         @click="clickedPop"
       >
@@ -99,7 +99,7 @@
         v-if="middle"
         id="ck_sp_m-sp-action"
         :style="{
-          fontWeight: '400',
+          fontWeight: '400 !important',
           transition: 'all .5s',
           opacity: '0.7',
           marginBottom: '0.25rem',
@@ -113,7 +113,7 @@
           position: 'relative',
           color: this.textColor,
           zIndex: '9998 !important',
-          fontWeight: 'normal',
+          fontSize: '12px !important',
         }"
         @click="clickedPop"
       >
@@ -135,7 +135,11 @@
         <timeago
           :datetime="purchasedAt"
           :locale="locale"
-          :style="{ zIndex: '9998', }"
+          :style="{
+            zIndex: '9998',
+            fontSize: '12px !important',
+            fontWeight: '400 !important',
+          }"
         />
       </div>
     </div>
