@@ -9,7 +9,8 @@
         :border-radius="25"
         :click-url="salespop.clickUrl"
         background-color="#fff"
-        text-color="#333"
+        background-img="https://res.cloudinary.com/carlsapps/image/upload/v1575912142/christmas-3_ensom9.png"
+        text-color="#fff"
       />
     </div>
   </div>

@@ -48,7 +48,7 @@
     >
       <img
         id="ck_sp_m-sp-img"
-        :src="img"
+        :src="image"
         :style="{
           width: '100% !important',
           height: 'auto !important',
@@ -101,7 +101,7 @@
         :style="{
           fontWeight: '400 !important',
           transition: 'all .5s',
-          opacity: '0.7',
+          opacity: '0.85',
           marginBottom: '0.25rem',
           marginTop: 0,
           marginLeft: 0,
@@ -208,6 +208,10 @@ export default {
     clickUrl: {
       type: String,
       default: () => ""
+    },
+    backgroundImg: {
+      type: String,
+      default: () => null
     }
   },
   data() {
@@ -217,12 +221,18 @@ export default {
   },
   computed: {
     shopPopStyles() {
-      const backgroundColor = this.backgroundColor || "#fff";
+      let background = "";
+      if (this.backgroundImg) {
+        background = `url("${this.backgroundImg}") no-repeat top right`;
+      } else {
+        background = this.backgroundColor || "#fff";
+      }
       const textColor = this.textColor || "#333";
       const borderRadius = this.borderRadius || "50%";
 
       return {
-        background: backgroundColor,
+        background: background,
+        backgroundSize: "cover",
         color: textColor,
         borderRadius: `${borderRadius}px`,
         transition: "all .5s",
@@ -267,6 +277,12 @@ export default {
         return this.fromAnonymous;
       }
       return "Someone";
+    },
+    image() {
+      if (this.imageExists(this.img)) {
+        return this.img;
+      }
+      return "https://res.cloudinary.com/carlsapps/image/upload/v1575911100/default-product_hmddwe.png";
     }
   },
   methods: {
@@ -295,6 +311,12 @@ export default {
       if (this.clickUrl && this.clickUrl !== "") {
         this.$emit("open-url", this.clickUrl);
       }
+    },
+    imageExists(image) {
+      const http = new XMLHttpRequest();
+      http.open("HEAD", image, false);
+      http.send();
+      return http.status !== 404;
     }
   }
 };
