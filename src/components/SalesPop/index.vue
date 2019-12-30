@@ -54,6 +54,7 @@
           height: 'auto !important',
           margin: '0 !important',
           padding: '0 !important',
+          opacity: '1 !important',
           cursor: 'pointer',
         }"
       />
