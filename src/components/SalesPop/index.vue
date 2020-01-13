@@ -16,34 +16,14 @@
       <img
         id="ck_sp_m-sp-times"
         src="https://unicons.iconscout.com/release/v1.0.0/svg/times.svg"
-        :style="{
-          width: '20px !important',
-          height: '20px !important',
-          cursor: 'pointer',
-          margin: '0 !important',
-          padding: '0 !important',
-        }"
+        :style="iconTimesStyles"
       />
     </div>
 
     <!-- Img -->
     <div
       id="ck_sp_m-sp-img-cont"
-      :style="{
-        transition: 'all .5s',
-        display: 'flex',
-        flex: 'none',
-        alignItems: 'center',
-        overflow: 'hidden',
-        backgroundColor: '#fff',
-        margin: '8px 0',
-        borderRadius: '50%',
-        cursor: 'pointer',
-        zIndex: '9998 !important',
-        height: '80px !important',
-        width: '80px !important',
-        position: 'relative',
-      }"
+      :style="imageContainerStyles"
       @click="clickedPop"
     >
       <img
@@ -76,21 +56,7 @@
     >
       <p
         id="ck_sp_m-sp-name"
-        :style="{
-          transition: 'all .5s',
-          marginBottom: '0.25rem',
-          marginTop: 0,
-          marginLeft: 0,
-          marginRight: 0,
-          padding: 0,
-          cursor: 'pointer',
-          lineHeight: '1',
-          position: 'relative',
-          color: this.textColor,
-          zIndex: '9998 !important',
-          fontWeight: '500 !important',
-          fontSize: '14px !important',
-        }"
+        :style="topStyles"
         @click="clickedPop"
       >
         {{ top }}
@@ -98,29 +64,19 @@
       <p
         v-if="middle"
         id="ck_sp_m-sp-action"
-        :style="{
-          fontWeight: '400 !important',
-          transition: 'all .5s',
-          opacity: '0.85',
-          marginBottom: '0.25rem',
-          marginTop: 0,
-          marginLeft: 0,
-          marginRight: 0,
-          padding: 0,
-          lineHeight: '1.3',
-          cursor: 'pointer',
-          lineHeight: '1',
-          position: 'relative',
-          color: this.textColor,
-          zIndex: '9998 !important',
-          fontSize: '12px !important',
-        }"
+        :style="middleStyles"
         @click="clickedPop"
       >
         {{ middle }}
+        <timeago
+          v-if="purchasedAt && popSize == 'small'"
+          :datetime="purchasedAt"
+          :locale="locale"
+          :style="timeagoStyles"
+        />
       </p>
       <div
-        v-if="purchasedAt"
+        v-if="purchasedAt && popSize == 'default'"
         id="ck_sp_m-sp-verified"
         :style="{
           fontWeight: '400',
@@ -135,11 +91,7 @@
         <timeago
           :datetime="purchasedAt"
           :locale="locale"
-          :style="{
-            zIndex: '9998',
-            fontSize: '12px !important',
-            fontWeight: '400 !important',
-          }"
+          :style="timeagoStyles"
         />
       </div>
     </div>
@@ -212,6 +164,10 @@ export default {
     backgroundImg: {
       type: String,
       default: () => null
+    },
+    popSize: {
+      type: String,
+      default: () => "small"
     }
   },
   data() {
@@ -244,14 +200,21 @@ export default {
         alignItems: "center",
         paddingTop: "0 !important",
         paddingBottom: "0 !important",
-        paddingLeft: "16px !important",
-        paddingRight: "24px !important",
+        paddingLeft: "8px !important",
+        paddingRight: "16px !important",
         margin: 0,
         cursor: "pointer",
         zIndex: "9998 !important"
       };
     },
     deleteIconContStyles() {
+      let size = "";
+      if (this.popSize == "default") {
+        size = 32;
+      } else {
+        size = 24;
+      }
+
       return {
         transition: "all .5s",
         top: "0",
@@ -261,8 +224,8 @@ export default {
         backgroundColor: "#fff",
         boxShadow:
           "0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)",
-        height: "32px !important",
-        width: "32px !important",
+        height: `${size}px !important`,
+        width: `${size}px !important`,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -283,6 +246,90 @@ export default {
         return this.img;
       }
       return "https://res.cloudinary.com/carlsapps/image/upload/v1575911100/default-product_hmddwe.png";
+    },
+    sizeSettings() {
+      if (this.popSize == "small") {
+        return {
+          imgSize: 60,
+          iconSize: 16,
+          topFontSize: 13,
+          bottomFontSize: 11
+        };
+      }
+      return {
+        imgSize: 80,
+        iconSize: 20,
+        topFontSize: 14,
+        bottomFontSize: 12
+      };
+    },
+    imageContainerStyles() {
+      return {
+        transition: "all .5s",
+        display: "flex",
+        flex: "none",
+        alignItems: "center",
+        overflow: "hidden",
+        backgroundColor: "#fff",
+        margin: "8px 0",
+        borderRadius: "50%",
+        cursor: "pointer",
+        zIndex: "9998 !important",
+        height: `${this.sizeSettings.imgSize}px !important`,
+        width: `${this.sizeSettings.imgSize}px !important`,
+        position: "relative"
+      };
+    },
+    iconTimesStyles() {
+      return {
+        width: `${this.sizeSettings.iconSize}px !important`,
+        height: `${this.sizeSettings.iconSize}px !important`,
+        cursor: "pointer",
+        margin: "0 !important",
+        padding: "0 !important"
+      };
+    },
+    topStyles() {
+      return {
+        transition: "all .5s",
+        marginBottom: "0.25rem",
+        marginTop: 0,
+        marginLeft: 0,
+        marginRight: 0,
+        padding: 0,
+        cursor: "pointer",
+        lineHeight: "1",
+        position: "relative",
+        color: this.textColor,
+        zIndex: "9998 !important",
+        fontWeight: "500 !important",
+        fontSize: `${this.sizeSettings.topFontSize}px !important`
+      };
+    },
+    middleStyles() {
+      return {
+        fontWeight: "400 !important",
+        transition: "all .5s",
+        opacity: "0.85",
+        marginBottom: "0.25rem",
+        marginTop: 0,
+        marginLeft: 0,
+        marginRight: 0,
+        padding: 0,
+        cursor: "pointer",
+        lineHeight: "1",
+        position: "relative",
+        color: this.textColor,
+        zIndex: "9998 !important",
+        fontSize: `${this.sizeSettings.bottomFontSize}px !important`
+      };
+    },
+    timeagoStyles() {
+      return {
+        zIndex: "9998",
+        fontSize: `${this.sizeSettings.bottomFontSize}px !important`,
+        fontWeight: "400 !important"
+      };
     }
   },
   methods: {
