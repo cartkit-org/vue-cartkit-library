@@ -169,6 +169,22 @@ export default {
     popSize: {
       type: String,
       default: () => "small"
+    },
+    paddingTop: {
+      type: String,
+      default: () => "0 !important"
+    },
+    paddingBottom: {
+      type: String,
+      default: () => "0 !important"
+    },
+    paddingRight: {
+      type: String,
+      default: () => "8px !important"
+    },
+    paddingLeft: {
+      type: String,
+      default: () => "16px !important"
     }
   },
   data() {
@@ -199,10 +215,10 @@ export default {
         position: "relative",
         display: "flex",
         alignItems: "center",
-        paddingTop: "0 !important",
-        paddingBottom: "0 !important",
-        paddingLeft: "8px !important",
-        paddingRight: "16px !important",
+        paddingTop: this.paddingTop,
+        paddingBottom: this.paddingBottom,
+        paddingLeft: this.paddingLeft,
+        paddingRight: this.paddingRight,
         margin: 0,
         cursor: "pointer",
         zIndex: "9998 !important"
