@@ -22,7 +22,7 @@ Vue.use(VueTimeago, {
     sv: require("date-fns/locale/sv"),
     fi: require("date-fns/locale/fi"),
     id: require("date-fns/locale/id"),
-    hu: require('date-fns/locale/hu')
+    hu: require("date-fns/locale/hu")
   }
 });
 

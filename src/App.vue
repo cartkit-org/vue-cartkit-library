@@ -13,17 +13,25 @@
         text-color="#fff"
       />
     </div>
+    <div class="content">
+      <Button>Algo</Button>
+      <Loader />
+    </div>
   </div>
 </template>
 
 <script>
 import moment from "moment";
 import SalesPop from "./components/SalesPop";
+import Button from "./components/General/Button.vue";
+import Loader from "./components/General/Loader.vue";
 
 export default {
   name: "app",
   components: {
-    SalesPop
+    SalesPop,
+    Button,
+    Loader
   },
   data() {
     return {
