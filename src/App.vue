@@ -16,20 +16,26 @@
     <div class="content">
       <Button>Algo</Button>
       <Loader />
+      <Divider />
+      <EmptyState />
     </div>
   </div>
 </template>
 
 <script>
 import moment from "moment";
-import SalesPop from "./components/SalesPop";
+import SalesPop from "./components/Advanced/SalesPop";
 import Button from "./components/General/Button.vue";
 import Loader from "./components/General/Loader.vue";
+import Divider from "./components/Layout/Divider.vue";
+import EmptyState from "./components/Layout/EmptyState.vue";
 
 export default {
   name: "app",
   components: {
+    EmptyState,
     SalesPop,
+    Divider,
     Button,
     Loader
   },
