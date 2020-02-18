@@ -25,10 +25,10 @@
 <script>
 import moment from "moment";
 import SalesPop from "./components/Advanced/SalesPop";
-import Button from "./components/General/Button.vue";
-import Loader from "./components/General/Loader.vue";
-import Divider from "./components/Layout/Divider.vue";
-import EmptyState from "./components/Layout/EmptyState.vue";
+import Button from "./components/General/Button";
+import Loader from "./components/General/Loader";
+import Divider from "./components/Layout/Divider";
+import EmptyState from "./components/Layout/EmptyState";
 
 export default {
   name: "app",

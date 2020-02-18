@@ -70,14 +70,14 @@
       >
         {{ middle }}
         <timeago
-          v-if="purchasedAt && popSize == 'small'"
-          :datetime="purchasedAt"
+          v-if="popDate && popSize == 'small'"
+          :datetime="popDate"
           :locale="locale"
           :style="timeagoStyles"
         />
       </p>
       <div
-        v-if="purchasedAt && popSize == 'default'"
+        v-if="popDate && popSize == 'default'"
         id="ck_sp_m-sp-verified"
         :style="{
           fontWeight: '400',
@@ -90,7 +90,7 @@
         }"
       >
         <timeago
-          :datetime="purchasedAt"
+          :datetime="popDate"
           :locale="locale"
           :style="timeagoStyles"
         />
@@ -122,7 +122,7 @@ export default {
       type: String,
       default: () => null
     },
-    purchasedAt: {
+    popDate: {
       type: String,
       default: () => ""
     },
@@ -136,11 +136,11 @@ export default {
     },
     backgroundColor: {
       type: String,
-      default: () => ""
+      default: () => "#fff"
     },
     textColor: {
       type: String,
-      default: () => ""
+      default: () => "#333"
     },
     borderRadius: {
       type: Number,
@@ -148,7 +148,7 @@ export default {
     },
     deletePop: {
       type: Boolean,
-      default: () => true
+      default: () => false
     },
     anonymous: {
       type: Boolean,
@@ -156,7 +156,7 @@ export default {
     },
     locale: {
       type: String,
-      default: () => ""
+      default: () => "en"
     },
     clickUrl: {
       type: String,

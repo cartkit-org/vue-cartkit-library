@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="carkit-divider" :class="size">
+  <div class="carkit-divider" :class="margin">
     <p v-if="heading">{{ heading }}</p>
     <div class="divider" />
   </div>
@@ -12,12 +12,6 @@ export default {
       type: String,
       default: () => {
         return "none";
-      }
-    },
-    size: {
-      type: String,
-      default: () => {
-        return "md";
       }
     }
   },
