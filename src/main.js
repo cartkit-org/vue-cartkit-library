@@ -1,9 +1,12 @@
 import Vue from "vue";
 import App from "./App.vue";
 import VueTimeago from "vue-timeago";
+import VuePrism from "vue-prism";
+import router from "./router";
 
 Vue.config.productionTip = false;
 
+Vue.use(VuePrism);
 Vue.use(VueTimeago, {
   name: "Timeago",
   locale: "en",
@@ -27,5 +30,6 @@ Vue.use(VueTimeago, {
 });
 
 new Vue({
+  router,
   render: h => h(App)
 }).$mount("#app");
