@@ -71,7 +71,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .cartkit-button {
   transition: all 0.5s;
   display: inline-flex;
