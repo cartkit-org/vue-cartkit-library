@@ -78,6 +78,10 @@ export default {
     .middle {
       span {
         color: #1585ff;
+        font-size: 0.875rem;
+        background-color: #f4f6f9;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.5rem;
       }
     }
   }

@@ -2,21 +2,21 @@
   <div class="button-page">
     <h3>Examples</h3>
     <p>Here are a few examples of buttons:</p>
-    <div class="example">
+    <div v-for="(theme, i) in themes" :key="i" class="example">
       <span>
-        <Button size="xl">Button</Button>
+        <Button size="xl" :theme="theme">Button</Button>
       </span>
       <span>
-        <Button size="lg">Button</Button>
+        <Button size="lg" :theme="theme">Button</Button>
       </span>
       <span>
-        <Button>Button</Button>
+        <Button :theme="theme">Button</Button>
       </span>
       <span>
-        <Button size="sm">Button</Button>
+        <Button size="sm" :theme="theme">Button</Button>
       </span>
       <span>
-        <Button size="xs">Button</Button>
+        <Button size="xs" :theme="theme">Button</Button>
       </span>
     </div>
     <div class="props">
@@ -39,6 +39,7 @@ export default {
   data() {
     return {
       snippets,
+      themes: ["default", "cc", "sp", "br", "pk"],
       props: [
         {
           property: "theme",

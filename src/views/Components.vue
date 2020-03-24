@@ -92,10 +92,10 @@ export default {
         }
 
         h1 {
-          font-size: 2rem;
           text-transform: capitalize;
           font-weight: 500;
           margin-bottom: 0.5rem;
+          font-size: 2rem;
         }
       }
 
