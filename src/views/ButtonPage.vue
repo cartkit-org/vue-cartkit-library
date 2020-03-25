@@ -73,6 +73,12 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    clickPop(url) {
+      // eslint-disable-next-line
+      console.log(url)
+    }
   }
 };
 </script>

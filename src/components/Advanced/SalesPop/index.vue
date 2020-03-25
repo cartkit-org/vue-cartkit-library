@@ -54,11 +54,11 @@
         maxWidth: '310px !important',
         zIndex: '9998',
       }"
+      @click="clickedPop"
     >
       <p
         id="ck_sp_m-sp-name"
         :style="topStyles"
-        @click="clickedPop"
       >
         {{ top }}
       </p>
@@ -66,7 +66,6 @@
         v-if="middle"
         id="ck_sp_m-sp-action"
         :style="middleStyles"
-        @click="clickedPop"
       >
         {{ middle }}
         <timeago
