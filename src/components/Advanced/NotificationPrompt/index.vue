@@ -27,24 +27,23 @@ export default {
   props: {
     pushIcon: {
       type: String,
-      default:
-        "https://s3.amazonaws.com/checkouts-public/notifications_grey_192x192.png"
+      default: ""
     },
     templateHeader: {
       type: String,
-      default: `Would you like to receive our latest products and offers?`
+      default: ""
     },
     templateBody: {
       type: String,
-      default: "You'll be notified about the latest sales and discounts."
+      default: ""
     },
     dontAllowBtnText: {
       type: String,
-      default: "Don't Allow"
+      default: ""
     },
     allowBtnText: {
       type: String,
-      default: "Allow"
+      default: ""
     }
   }
 };

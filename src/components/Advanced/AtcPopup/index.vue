@@ -73,7 +73,7 @@ export default {
   props: {
     heading: {
       type: String,
-      default: "Please enter your email"
+      default: ""
     },
     headingColor: {
       type: String,
@@ -81,7 +81,7 @@ export default {
     },
     subheading: {
       type: String,
-      default: "To add this item to your cart, please enter your email address"
+      default: ""
     },
     subheadingColor: {
       type: String,
@@ -89,11 +89,11 @@ export default {
     },
     emailPlaceholderText: {
       type: String,
-      default: "Email address"
+      default: ""
     },
     buttonText: {
       type: String,
-      default: "Add To Cart"
+      default: ""
     },
     buttonFontColor: {
       type: String,
