@@ -19,7 +19,8 @@
     "build": "vue-cli-service build",
     "build-bundle": "vue-cli-service build --target lib --name vue-cartkit-library ./src/index.js",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "storybook": "start-storybook"
   },
   "dependencies": {
     "core-js": "^3.3.2",
@@ -30,6 +31,10 @@
     "vue-timeago": "^5.1.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/preset-scss": "^1.0.2",
+    "@storybook/vue": "^5.3.18",
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
     "@vue/cli-plugin-unit-mocha": "^4.0.0",
@@ -37,13 +42,18 @@
     "@vue/eslint-config-prettier": "^5.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-vue": "^2.0.2",
     "chai": "^4.1.2",
+    "css-loader": "^3.5.2",
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.0.0",
     "prettier": "^1.18.2",
     "sass": "^1.19.0",
-    "sass-loader": "^8.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.4",
+    "vue-loader": "^15.9.1",
     "vue-template-compiler": "^2.6.10"
   }
 }
