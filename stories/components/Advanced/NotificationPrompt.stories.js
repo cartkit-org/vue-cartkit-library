@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import Vue from "vue";
 import NotificationPrompt from "~/components/Advanced/NotificationPrompt/";
 import { withKnobs, text } from "@storybook/addon-knobs";
