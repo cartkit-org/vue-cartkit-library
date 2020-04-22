@@ -5,6 +5,12 @@
     "name": "JP Casabianca",
     "email": "jp@cartkit.com"
   },
+  "contributors": [
+    {
+      "name": "Duhamel Guerrero",
+      "email": "duhamel@cartkit.com"
+    }
+  ],
   "license": "MIT",
   "files": [
     "src",
