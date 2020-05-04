@@ -147,7 +147,6 @@ export default {
 
   .ck_cc_atc_text-container {
     text-align: center;
-    max-width: 320px;
 
     h3 {
       color: #1a202c;
@@ -156,6 +155,9 @@ export default {
       margin-top: 16px;
       font-size: 24px;
       margin-bottom: 0;
+      word-break: break-word;
+      max-height: 96px;
+      overflow: hidden;
     }
 
     p {
@@ -164,6 +166,9 @@ export default {
       margin-top: 16px;
       margin-bottom: 0;
       font-size: 16px;
+      word-break: break-word;
+      max-height: 120px;
+      overflow: hidden;
     }
   }
 
