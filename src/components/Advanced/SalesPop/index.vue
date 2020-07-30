@@ -376,6 +376,7 @@ export default {
       }
     },
     imageExists(image) {
+      if(image === "") return false
       const http = new XMLHttpRequest();
       http.open("HEAD", image, false);
       http.send();
