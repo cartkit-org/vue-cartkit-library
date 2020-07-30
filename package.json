@@ -1,6 +1,6 @@
 {
   "name": "vue-cartkit-library",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "author": {
     "name": "JP Casabianca",
     "email": "jp@cartkit.com"
@@ -9,6 +9,10 @@
     {
       "name": "Duhamel Guerrero",
       "email": "duhamel@cartkit.com"
+    },
+    {
+      "name": "David Pérez",
+      "email": "david@cartkit.com"
     }
   ],
   "license": "MIT",
