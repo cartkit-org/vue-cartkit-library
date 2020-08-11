@@ -195,7 +195,7 @@ export default {
     shopPopStyles() {
       let background = "";
       if (this.backgroundImg) {
-        background = `url("${this.backgroundImg}") no-repeat top right`;
+        background = `url("${this.backgroundImg}")`;
       } else {
         background = this.backgroundColor || "#fff";
       }
@@ -204,7 +204,7 @@ export default {
 
       return {
         background: background,
-        backgroundSize: "cover",
+        backgroundSize: "cover !important",
         color: textColor,
         borderRadius: `${borderRadius}px`,
         transition: "all .5s",
@@ -220,7 +220,8 @@ export default {
         paddingRight: this.paddingRight,
         margin: 0,
         cursor: "pointer",
-        zIndex: "9998 !important"
+        zIndex: "9998 !important",
+        backgroundRepeat: "no-repeat"
       };
     },
     deleteIconContStyles() {
@@ -376,7 +377,7 @@ export default {
       }
     },
     imageExists(image) {
-      if (image === "") return false
+      if (image === "") return false;
       const http = new XMLHttpRequest();
       http.open("HEAD", image, false);
       http.send();
