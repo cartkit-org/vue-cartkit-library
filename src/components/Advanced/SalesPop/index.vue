@@ -204,7 +204,7 @@ export default {
 
       return {
         background: background,
-        backgroundSize: "cover !important",
+        backgroundSize: "cover",
         color: textColor,
         borderRadius: `${borderRadius}px`,
         transition: "all .5s",
@@ -221,7 +221,8 @@ export default {
         margin: 0,
         cursor: "pointer",
         zIndex: "9998 !important",
-        backgroundRepeat: "no-repeat"
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center"
       };
     },
     deleteIconContStyles() {
