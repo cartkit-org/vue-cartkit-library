@@ -4,6 +4,7 @@
     id="ck_sp_m-cartkit-shop-pop"
     :class="template"
     :style="shopPopStyles"
+    @click="clickedPop"
   >
 
     <!-- Close Icon -->
@@ -24,7 +25,6 @@
     <div
       id="ck_sp_m-sp-img-cont"
       :style="imageContainerStyles"
-      @click="clickedPop"
     >
       <img
         id="ck_sp_m-sp-img"
@@ -54,7 +54,6 @@
         maxWidth: '310px !important',
         zIndex: '9998',
       }"
-      @click="clickedPop"
     >
       <p
         id="ck_sp_m-sp-name"
@@ -366,8 +365,7 @@ export default {
       return "Recently";
     },
     closePop() {
-      this.hideP();
-      this.$cookies.set("sales_pop_hide", true);
+      this.$emit("closed");
     },
     hideP() {
       this.$emit("closed");

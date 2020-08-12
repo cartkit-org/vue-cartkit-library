@@ -12,6 +12,9 @@
         background-color="#fff"
         background-img="https://res.cloudinary.com/carlsapps/image/upload/v1575912142/christmas-3_ensom9.png"
         text-color="#fff"
+        @open-url="clickPop"
+        @closed="hidePops"
+        deletePop
       />
     </div>
   </div>
@@ -38,6 +41,14 @@ export default {
           "https://roselinlin.com/collections/weekly-new-in/products/casual-long-sleeve-letter-shirts-tops"
       }
     };
+  },
+  methods: {
+    clickPop(url) {
+      console.log('url', url);
+    },
+    hidePops() {
+      console.log('hide');
+    }
   }
 };
 </script>
