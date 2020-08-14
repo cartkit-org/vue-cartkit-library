@@ -44,10 +44,10 @@ export default {
   },
   methods: {
     clickPop(url) {
-      console.log('url', url);
+      console.log("url", url);
     },
     hidePops() {
-      console.log('hide');
+      console.log("hide");
     }
   }
 };

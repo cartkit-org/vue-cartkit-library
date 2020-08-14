@@ -183,6 +183,10 @@ export default {
     paddingLeft: {
       type: String,
       default: () => "16px !important"
+    },
+    zIndex: {
+      type: String,
+      default: "9998 !important"
     }
   },
   data() {
@@ -219,7 +223,7 @@ export default {
         paddingRight: this.paddingRight,
         margin: 0,
         cursor: "pointer",
-        zIndex: "9998 !important",
+        zIndex: this.zIndex,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center"
       };
