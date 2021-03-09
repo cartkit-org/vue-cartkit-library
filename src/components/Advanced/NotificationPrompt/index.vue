@@ -1,7 +1,7 @@
 <template>
   <div class="ck_cc_np_notification">
     <div class="ck_cc_np_left-side">
-      <img style="max-width: 100%" :src="pushIcon" />
+      <img style="max-width: 100%" :src="pushIcon" alt="Notification Bell" />
     </div>
     <div class="ck_cc_np_right-side">
       <div class="ck_cc_np_title">
@@ -95,14 +95,14 @@ export default {
 .ck_cc_np_notification .ck_cc_np_dontallow {
   text-align: center;
   padding-right: 24px;
-  color: #3a87f7;
+  color: #2563eb;
   text-decoration: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
   &:hover {
-    color: darken(#3a87f7, 15%);
+    color: darken(#2563eb, 15%);
   }
 }
 
@@ -119,12 +119,12 @@ export default {
   letter-spacing: 0.02857em;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  background: #3a87f7;
+  background: #2563eb;
   color: #fff;
   text-decoration: none;
 
   &:hover {
-    background: darken(#3a87f7, 10%);
+    background: darken(#2563eb, 10%);
     color: #fff;
   }
 }
