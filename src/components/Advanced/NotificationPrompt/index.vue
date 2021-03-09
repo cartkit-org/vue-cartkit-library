@@ -78,13 +78,14 @@ export default {
   font-size: 17px;
   margin-top: 0px;
   line-height: 1.4;
+  color: #111827;
 }
 
 .ck_cc_np_notification .ck_cc_np_subtitle {
   text-align: left;
   font-size: 12px;
   padding-top: 5px;
-  color: gray;
+  color: #6b7280;
 }
 
 .ck_cc_np_notification .ck_cc_np_buttons {
